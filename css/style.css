@@ -80,6 +80,20 @@ main .con {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 999px) {
+  main {
+    padding: 8vh 10vw;
+  }
+  main h2 {
+    font-size: 13vw;
+  }
+}
+@media screen and (max-width: 499px) {
+  main .breadcrumb {
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+}
 header {
   width: 100%;
   padding: 20px 15vw;
