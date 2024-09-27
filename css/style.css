@@ -28,9 +28,15 @@ textarea {
   outline: 0;
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background: #efefef;
+}
+
 header {
   width: 100%;
-  padding: 20px 15vw 20px;
+  padding: 20px 15vw;
   border-bottom: 1px solid #ddd;
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +81,25 @@ header button {
   display: none;
 }
 
+.mobilePanel {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 5;
+  transition: 0.5s;
+  top: 0px;
+  left: -260px;
+}
+.mobilePanel.on {
+  left: 0px;
+}
+
 @media screen and (max-width: 999px) {
+  header {
+    padding: 16px 10vw;
+  }
   header h1 {
     font-size: 1.4rem;
   }
