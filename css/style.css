@@ -115,5 +115,62 @@ header button {
     font-size: 1.2rem;
   }
 }
+footer {
+  width: 100%;
+  padding: 100px 15vw;
+  background: #333;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer h1 {
+  font: 600 1.3rem/1 "orbitron";
+  color: #888;
+  display: flex;
+  align-items: flex-end;
+}
+footer article {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer article ul {
+  width: 100%;
+  color: #777;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+footer article p {
+  display: flex;
+  width: 100%;
+  color: #888;
+  justify-content: flex-end;
+  letter-spacing: 2px;
+  font: 400 0.8rem/1 "orbitron";
+}
+
+@media screen and (max-width: 999px) {
+  footer {
+    padding: 80px 10vw;
+  }
+}
+@media screen and (max-width: 499px) {
+  footer {
+    padding: 60px 10vw;
+  }
+  footer article {
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer article ul {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  footer article p {
+    justify-content: flex-start;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
