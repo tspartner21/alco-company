@@ -142,7 +142,7 @@ header button {
 }
 
 .mobilePanel {
-  width: 260px;
+  width: 320px;
   height: 100vh;
   position: fixed;
   background: rgba(255, 255, 255, 0.5);
@@ -150,34 +150,55 @@ header button {
   z-index: 5;
   transition: 0.5s;
   top: 0px;
-  left: -260px;
+  left: -340px;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
 }
 .mobilePanel h1 {
   width: 100%;
   height: 50vh;
   display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.mobilePanel h1 a {
+  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  font: 500 1.6rem/1 "orbitron";
+  font: 500 2.8rem/1 "orbitron";
   color: #333;
+  margin-bottom: 10px;
+}
+.mobilePanel h1 span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font: 500 0.8rem/1 "raleway";
+  color: #555;
+  letter-spacing: 1px;
 }
 .mobilePanel ul {
   width: 100%;
   height: 40vh;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid #ddd;
 }
 .mobilePanel ul li {
   width: 50%;
   height: 50%;
   display: flex;
   flex-wrap: wrap;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.mobilePanel ul li:nth-of-type(even) {
+  border-right: none;
 }
 .mobilePanel ul li a {
   width: 100%;
@@ -186,6 +207,7 @@ header button {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  color: #444;
 }
 .mobilePanel ul li a i {
   text-align: center;
@@ -196,7 +218,7 @@ header button {
 .mobilePanel ul li a span {
   text-align: center;
   width: 100%;
-  font-size: 1rem;
+  font: 300 1rem/1 "raleway";
 }
 .mobilePanel.on {
   left: 0px;
@@ -204,7 +226,7 @@ header button {
 
 @media screen and (max-width: 999px) {
   header {
-    padding: 16px 10vw;
+    padding: 20px 10vw;
   }
   header h1 {
     font-size: 1.4rem;
