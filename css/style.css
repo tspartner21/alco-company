@@ -30,7 +30,7 @@ textarea {
 
 header {
   width: 100%;
-  padding: 14px 15vw 20px;
+  padding: 20px 15vw 20px;
   border-bottom: 1px solid #ddd;
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +66,30 @@ header nav .sns {
   margin-bottom: 20px;
   font-size: 0.8rem;
   opacity: 0.5;
+}
+header button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  header nav {
+    display: none;
+  }
+  header button {
+    display: block;
+  }
+}
+@media screen and (max-width: 499px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
