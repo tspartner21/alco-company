@@ -429,9 +429,9 @@ footer article p {
 }
 
 .scroller {
-  width: 20px;
+  width: 10px;
   position: fixed;
-  right: 50px;
+  right: 40px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
@@ -450,6 +450,12 @@ footer article p {
 .scroller li.on {
   height: 100px;
   background: #000;
+}
+
+@media screen and (max-width: 999px) {
+  .scroller {
+    right: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
