@@ -18,10 +18,10 @@ scroll_btns.forEach((btn, idx) => {
 //window scroll event
 window.addEventListener("scroll", () => {
 	const scroll = window.scrollY;
-	if (scroll >= posArr[0]) activation(scroll_btns, 0);
-	if (scroll >= posArr[1]) activation(scroll_btns, 1);
-	if (scroll >= posArr[2]) activation(scroll_btns, 2);
-	if (scroll >= posArr[3]) activation(scroll_btns, 3);
+	//posArr.forEach((pos, idx) => scroll >= pos && activation(scroll_btns, idx));
+	posArr.forEach((pos, idx) => {
+		if (scroll >= pos) activation(scroll_btns, idx);
+	});
 });
 
 //activation func
