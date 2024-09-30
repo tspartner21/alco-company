@@ -18,14 +18,18 @@ scroll_btns.forEach((btn, idx) => {
 //window scroll event
 window.addEventListener("scroll", () => {
 	const scroll = window.scrollY;
-	//posArr.forEach((pos, idx) => scroll >= pos && activation(scroll_btns, idx));
 	posArr.forEach((pos, idx) => {
-		if (scroll >= pos) activation(scroll_btns, idx);
+		//if (scroll >= pos) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
+		if (scroll >= pos) {
+			activation(scroll_btns, idx);
+			activation(secArr, idx);
+		}
 	});
 });
 
 //activation func
 function activation(arrEl, index) {
-	arrEl.forEach(el => el.classList.remove("on"));
+	//arrEl.forEach(el => el.classList.remove("on"));
+	for (const el of arrEl) el.classList.remove("on");
 	arrEl[index].classList.add("on");
 }
