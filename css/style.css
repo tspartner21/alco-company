@@ -80,10 +80,6 @@ main .con {
   margin-top: 80px;
 }
 
-.home > main {
-  padding: 0px;
-}
-
 @media screen and (max-width: 999px) {
   main {
     padding: 8vh 10vw;
@@ -313,6 +309,7 @@ footer article p {
     justify-content: flex-start;
   }
 }
+<<<<<<< HEAD
 #visual {
   width: 100%;
   height: 100vh;
@@ -501,5 +498,7 @@ footer article p {
     right: 20px;
   }
 }
+=======
+>>>>>>> e3d30c6ffadac4a16a473b87d5de929607486eba
 
 /*# sourceMappingURL=style.css.map */
