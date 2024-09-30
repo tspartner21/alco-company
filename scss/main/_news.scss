@@ -42,22 +42,14 @@
 		}
 	}
 }
-
 //activated style
 #news.on {
 	h2 {
 		opacity: 1;
 		transform: translateX(0px);
 	}
-
 	article {
 		opacity: 1;
 		transform: scale(1);
 	}
 }
-
-/*
-	미션 (3시 40분까지)
-	1- visual영역의 컨텐츠를 위와 같은 방법으로 취향에 맞게 모션 처리
-	2- 지금과 같이 모션이 동작이 될때 아쉬운부분, 어색한부분 찾아보기
-*/
