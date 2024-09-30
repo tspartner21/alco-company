@@ -80,6 +80,10 @@ main .con {
   margin-top: 80px;
 }
 
+.home > main {
+  padding: 0px;
+}
+
 @media screen and (max-width: 999px) {
   main {
     padding: 8vh 10vw;
@@ -139,6 +143,13 @@ header button {
   border: none;
   font-size: 1rem;
   display: none;
+}
+
+.home > header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
 }
 
 .mobilePanel {
@@ -299,6 +310,37 @@ footer article p {
   footer article p {
     justify-content: flex-start;
   }
+}
+#visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: lightcyan;
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: lightgreen;
+}
+
+#news {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+#info {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: lightyellow;
 }
 
 /*# sourceMappingURL=style.css.map */

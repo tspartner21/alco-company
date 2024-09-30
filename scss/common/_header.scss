@@ -49,6 +49,14 @@ header {
 	}
 }
 
+//main header style
+.home > header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+}
+
 .mobilePanel {
 	width: 320px;
 	height: 100vh;
