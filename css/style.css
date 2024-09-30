@@ -348,7 +348,7 @@ footer article p {
   order: 2;
 }
 #visual .slogan article h2 {
-  font: 700 4.5rem/1 "raleway";
+  font: 700 5rem/1 "raleway";
   color: #333;
   margin-bottom: 5px;
 }
@@ -363,7 +363,7 @@ footer article p {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 #visual .slogan nav button {
   padding: 12px 34px;
