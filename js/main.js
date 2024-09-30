@@ -2,6 +2,7 @@ import Anime from "./anime.js";
 
 //variables
 let posArr = [];
+const base = -400;
 const secArr = document.querySelector("main").children;
 const scroll_btns = document.querySelectorAll(".scroller li");
 
@@ -18,7 +19,7 @@ scroll_btns.forEach((btn, idx) => {
 //window scroll event
 window.addEventListener("scroll", () => {
 	posArr.forEach((pos, idx) => {
-		if (window.scrollY >= pos) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
+		if (window.scrollY >= pos + base) [scroll_btns, secArr].forEach(arr => activation(arr, idx));
 	});
 });
 
