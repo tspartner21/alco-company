@@ -1,23 +1,31 @@
 import Anime from "./anime.js";
 
+//variables
 let posArr = [];
 const secArr = document.querySelector("main").children;
 const scroll_btns = document.querySelectorAll(".scroller li");
 
+//init (get section position array)
 for (let sec of secArr) posArr.push(sec.offsetTop);
 
+//scroll btn evnet
 scroll_btns.forEach((btn, idx) => {
 	btn.addEventListener("click", () => {
 		new Anime(window, { scroll: posArr[idx] });
-
-		//btn activation
-		scroll_btns.forEach(el => el.classList.remove("on"));
-		scroll_btns[idx].classList.add("on");
 	});
 });
 
-//window scroll event bind
+//window scroll event
 window.addEventListener("scroll", () => {
-	//console.log("scrollY", window.scrollY);
-	//console.log("offsetTop", banner.offsetTop);
+	const scroll = window.scrollY;
+	if (scroll >= posArr[0]) activation(scroll_btns, 0);
+	if (scroll >= posArr[1]) activation(scroll_btns, 1);
+	if (scroll >= posArr[2]) activation(scroll_btns, 2);
+	if (scroll >= posArr[3]) activation(scroll_btns, 3);
 });
+
+//activation func
+function activation(arrEl, index) {
+	arrEl.forEach(el => el.classList.remove("on"));
+	arrEl[index].classList.add("on");
+}
