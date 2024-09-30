@@ -23,22 +23,14 @@ scroll_btns.forEach((btn, idx) => {
 //window scroll event
 window.addEventListener("scroll", () => {
 	posArr.forEach((_, idx) => {
-		//중첩 조건식 자체를 변수에 미리 할당 (코드 가독성을 위해)
-		//현재 반복 순번이 마지막 순번이 아닐때는 두 박스 사이의 범위 동시 만족을 조건식으로 저장
-		//그렇지 않을때는 해당 순번위치의 박스이상으로 하나의 조건식을 변수에 저장
 		const condition =
 			idx !== posArr.length - 1
 				? window.scrollY >= posArr[idx] + base && window.scrollY < posArr[idx + 1] + base
 				: window.scrollY >= posArr[idx] + base;
 
-		//위의 분기처리된 조건식이 담겨있는 condition 변수를 조건식으로 활용
-		if (condition) {
-			scroll_btns[idx].classList.add("on");
-			secArr[idx].classList.add("on");
-		} else {
-			scroll_btns[idx].classList.remove("on");
-			secArr[idx].classList.remove("on");
-		}
+		condition
+			? [scroll_btns, secArr].forEach(arr => arr[idx].classList.add("on"))
+			: [scroll_btns, secArr].forEach(arr => arr[idx].classList.remove("on"));
 	});
 });
 
