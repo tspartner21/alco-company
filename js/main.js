@@ -33,3 +33,8 @@ function activation(arrEl, index) {
 	for (const el of arrEl) el.classList.remove("on");
 	arrEl[index].classList.add("on");
 }
+
+//미션 (2시 30분 까지)
+//1- 현재 스크롤 기능에서 발생하는 문제점 찾아보기
+//2- 문제점 찾았으면 해당 문제가 발생하는 원인 파악
+//3- 원인 파악이 되었다면 해결 방안 고민
